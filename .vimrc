@@ -1,20 +1,7 @@
 set runtimepath+=~/.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
-let g:vundle_default_git_proto = 'git'
-"no need now:set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"set rtp+=~/.vim/bundle/CtrlP.vim
-"set rtp+=~/.vim/bundle/taglist-plus
-"set rtp+=~/.vim/bundle/Syntastic
-"set rtp+=~/.vim/bundle/TaskList.vim
-"set rtp+=~/.vim/bundle/nerdtree
-"set rtp+=~/.vim/bundle/YouCompleteMe
-"set rtp+=~/.vim/bundle/vim-powerline
-"set rtp+=~/.vim/bundle/Mark
-"set rtp+=~/.vim/plugin
-"set rtp+=~/.vim/bundle/Gundo 
-"set rtp+=~/.vim/bundle/powerline
+
 "现在使用新的插件管理vim-plus
 "先检查是否存在这个插件管理器,设置文件夹目录
 let $BUNDLE = expand("$HOME/.vim")
@@ -51,36 +38,6 @@ Plug 'mhinz/vim-signify'
 " Should run at last
 call plug#end() 
 
-"call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-"   :BundleInstall  install 安装配置的插件
-"   :BundleInstall! update  更新
-"   :BundleClean    remove plugin not in list   删除本次无用插件 
-"   插件名称    如：sctooloose/nerdtree sctooloose是作者名 后面的是repo名称
-"插件管理
-"Bundle 'VundleVim/Vundle.vim'
-"侧边窗口插件
-"Bundle 'taglist-plus'
-"信息标记
-"Bundle 'TaskList.vim'
-"语法检查插件
-"Bundle 'Syntastic'
-"自动填充插件
-"Bundle 'Valloric/YouCompleteMe'
-"文件检索插件
-"Bundle 'CtrlP.vim'
-"资源管理器
-"Bundle 'scrooloose/nerdtree'
-"条带
-"Bundle 'Lokaltog/vim-powerline'
-"高亮
-"Bundle 'Mark'
-"撤销
-"Bundle 'Gundo'
-
 "*****************************************************
 "                Gundo配置                           *
 "*****************************************************
@@ -111,29 +68,7 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
-"*****************************************************
-"                CtrlP配置(由LeaderF取代)            *
-"*****************************************************
-"let g:ctrlp_working_path_mode = '0'       "disable work path mode
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"  \ 'file': '\v\.(exe|so|dll)$',
-"  \ 'link': 'some_bad_symbolic_links',
-"  \ }
-"Press <F5> to purge the cache for the current directory to get new files,
-"remove deleted files and apply new ignore options.
-"Press <c-f> and <c-b> to cycle between modes.
-"Press <c-d> to switch to filename only search instead of full path.
-"Press <c-r> to switch to regexp mode.
-"Use <c-j>, <c-k> or the arrow keys to navigate the result list.
-"Use <c-t> or <c-v>, <c-x> to open the selected entry in a new tab or in a new
-"split.
-"Use <c-n>, <c-p> to select the next/previous string in the prompt's history.
-"Use <c-y> to create a new file and its parent directories.
-"Use <c-z> to mark/unmark multiple files and <c-o> to open them.
 "*****************************************************
 "                标签页配置                            *
 "*****************************************************
@@ -147,12 +82,13 @@ map <F3> :tabp<CR>
 "*****************************************************
 nmap <F2> \m
 "nmap <F3> \n
-"\r
+
 "*****************************************************
 "            TaskList配置                            *
 "*****************************************************
 inoremap mk #TODO
 map <silent><F11> <Plug>TaskList
+
 "*****************************************************
 "           airline配置(代替powerline)               *
 "*****************************************************
@@ -160,18 +96,7 @@ map <silent><F11> <Plug>TaskList
 set t_Co=256
 set laststatus=2
 "let g:Powerline_symbols = 'fancy'
-"*****************************************************
-"             taglist配置(由LeaderF取代)                           *
-"*****************************************************
-" 按F8按钮，在窗口的左侧出现taglist的窗口,像vc的左侧的workpace
-"nnoremap <silent> <F8> :TlistToggle<CR><CR>
-" :Tlist              调用TagList
-"let Tlist_Show_One_File=0                    " 只显示当前文件的tags
-"let Tlist_Exit_OnlyWindow=1                  " 如果Taglist窗口是最后一个窗口则退出Vim
-"let Tlist_Use_Right_Window=1                 " 在右侧窗口中显示
-"let Tlist_File_Fold_Auto_Close=1             " 自动折叠
 
-"let Tlist_Ctags_Cmd ='/usr/local/bin/ctags'
 "*****************************************************
 "                   ALE配置                          *
 "*****************************************************
@@ -224,20 +149,7 @@ let g:ale_linters = {
 \   'c': ['clang'],
 \   'python': ['pylint'],
 \}
-"*****************************************************
-"           Syntastic配置(由ALE取代)。               *
-"*****************************************************
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_cpp_include_dirs = ['/usr/include/']
-"let g:syntastic_cpp_remove_include_errors = 1
-"let g:syntastic_cpp_check_header = 1
-"let g:syntastic_cpp_compiler = 'clang++'
-"let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
-"set error or warning signs
-"let g:syntastic_error_symbol = '✗'
-"let g:syntastic_warning_symbol = '⚠'
-"whether to show balloons
-"let g:syntastic_enable_balloons = 1
+
 "********************************************************
 "                      NERD_Tree 配置                   *
 "********************************************************
@@ -434,4 +346,4 @@ inoremap jk <esc>
 inoremap #d #define
 inoremap #in #include
 inoremap #i #ifdef
-"保存
+
