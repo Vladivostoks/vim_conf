@@ -9,7 +9,7 @@ let $PLUG_DIR = expand("$BUNDLE/autoload")
 let $OTHERPLUG_DIR = expand("$BUNDLE/bundle")
 
 if empty(glob(expand("$PLUG_DIR/plug.vim")))
-    silent !curl -fLo $PLUG_DIR/plug.vim --create-dirs\
+    silent !curl -fLo $PLUG_DIR/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
@@ -145,9 +145,9 @@ nmap sn <Plug>(ale_next_wrap)
 "nmap <Leader>d :ALEDetail<CR>
 "使用clang对c和c++进行语法检查，对python使用pylint进行语法检查
 let g:ale_linters = {
-\   'c++': ['clang'],
+\   'cpp': ['clang'],
 \   'c': ['clang'],
-\   'python': ['pylint'],
+\   'py': ['pylint'],
 \}
 
 "********************************************************
@@ -342,7 +342,7 @@ filetype plugin on
 filetype plugin indent on
 
 "键位映射
-inoremap jk <esc>
+inoremap jj <esc>
 inoremap #d #define
 inoremap #in #include
 inoremap #i #ifdef
