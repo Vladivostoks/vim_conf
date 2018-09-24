@@ -30,7 +30,7 @@ Plug 'vim-airline/vim-airline'
 "高亮          
 Plug 'vim-scripts/Mark'
 "撤销 在调用时候加载
-Plug 'vim-scripts/Gundo'
+Plug 'vim-scripts/Gundo',{ 'on':  'GundoToggle' }
 "自动索引更新
 Plug 'ludovicchabant/vim-gutentags'
 "版本控制修改内容比较
@@ -42,6 +42,8 @@ call plug#end()
 "                Gundo配置                           *
 "*****************************************************
 nnoremap ,. :GundoToggle<CR>
+"使用python3做解释器
+let g:gundo_prefer_python3 = 1
 "*****************************************************
 "                由LeaderF配置                       *
 "*****************************************************
