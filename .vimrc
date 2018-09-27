@@ -13,6 +13,7 @@ if empty(glob(expand("$PLUG_DIR/plug.vim")))
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
+
 source $PLUG_DIR/plug.vim
 call plug#begin(expand($OTHERPLUG_DIR))
 "信息标记      
@@ -30,7 +31,7 @@ Plug 'vim-airline/vim-airline'
 "高亮          
 Plug 'vim-scripts/Mark'
 "撤销 在调用时候加载
-Plug 'vim-scripts/Gundo',{ 'on':  'GundoToggle' }
+Plug 'sjl/gundo.vim',{ 'on':  'GundoToggle' }
 "自动索引更新
 Plug 'ludovicchabant/vim-gutentags'
 "版本控制修改内容比较
