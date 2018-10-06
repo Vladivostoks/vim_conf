@@ -150,6 +150,7 @@ nmap sn <Plug>(ale_next_wrap)
 let g:ale_linters = {
 \   'cpp': ['clang'],
 \   'c': ['clang'],
+\   'h': ['clang'],
 \   'py': ['pylint'],
 \}
 

@@ -97,6 +97,10 @@ flags = [
 'c++',
 '-I',
 '.',
+#private project dir
+'-I',
+'./include',
+#end
 '-isystem',
 '/usr/include',
 '-isystem',
