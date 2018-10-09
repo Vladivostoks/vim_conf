@@ -95,11 +95,14 @@ flags = [
 '-std=c++11',
 '-x',
 'c++',
-'-I',
-'.',
+#此处的.相对路径是相对生效的配置文件而言
+#'-I',
+#'.',
 #private project dir
-'-I',
-'./include',
+#'-I',
+#'./include',
+#'-I',
+#'./src',
 #end
 '-isystem',
 '/usr/include',
