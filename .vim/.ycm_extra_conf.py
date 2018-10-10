@@ -95,23 +95,16 @@ flags = [
 '-std=c++11',
 '-x',
 'c++',
-#此处的.相对路径是相对生效的配置文件而言
+#. is oppsite to ycm configuration pwd
 #'-I',
 #'.',
-#private project dir
-#'-I',
-#'./include',
-#'-I',
-#'./src',
-#end
 '-isystem',
 '/usr/include',
-'-isystem',
-'/usr/include/c++/4.2.1',
+#Cancel this,it will make error in complete,guess confict with default path
+#'-isystem',
+#'/usr/include/c++/8.2.0',
 '-isystem',
 '/usr/local/include',
-'-isystem',
-'/usr/local/include/c++/7.3.0',
 '-isystem',
 '/usr/local/include/glib-2.0',
 ]
