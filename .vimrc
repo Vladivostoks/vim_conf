@@ -36,6 +36,8 @@ Plug 'sjl/gundo.vim',{ 'on':  'GundoToggle' }
 Plug 'ludovicchabant/vim-gutentags'
 "版本控制修改内容比较
 Plug 'mhinz/vim-signify'
+"C++高亮模版
+"Plug 'octol/vim-cpp-enhanced-highlight'
 " Should run at last
 call plug#end() 
 
@@ -151,7 +153,7 @@ let g:ale_linters = {
 \   'cpp': ['clang'],
 \   'c': ['clang'],
 \   'h': ['clang'],
-\   'py': ['pylint'],
+\   'python': ['pylint'],
 \}
 
 "********************************************************
@@ -265,7 +267,7 @@ let g:ycm_filetype_whitelist = {
 			\ "sh":1,
 			\ "zsh":1,
 			\ "h":1,
-            \ "py":1,
+            \ "python":1,
 			\ }
 "补全条颜色配置
 "highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey

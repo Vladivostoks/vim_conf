@@ -1,0 +1,59 @@
+getLine
+diag
+Get
+Vec
+show
+[]
+array
+C++ 中，一个引用的形参放置一个右值作为实参，会发生什么？
+class Test
+{
+ const int &b;
+ public:
+ Test(const int&a):
+ b(a){}
+ void say(){cout<<b<<endl;}
+};
+例如上面的类中，我使用了以下代码测试
+int main()
+{
+	Test c(6);
+	Test d(7);
+	c.say();
+	d.say();
+}
+结果第一个c.say()的结果是一个垃圾数据（每次都不一样的结果），但是第二个d.say()却是正常的7，这里面发生了什么呢？
+C++ 中，一个引用的形参放置一个右值作为实参，会发生什么？
+class Test
+{
+ const int &b;
+ public:
+ Test(const int&a):
+ b(a){}
+ void say(){cout<<b<<endl;}
+};
+例如上面的类中，我使用了以下代码测试
+int main()
+{
+	Test c(6);
+	Test d(7);
+	c.say();
+	d.say();
+}
+结果第一个c.say()的结果是一个垃圾数据（每次都不一样的结果），但是第二个d.say()却是正常的7，这里面发生了什么呢？
+V
+Vector& openrat
+random
+UnitFr
+T
+UnitBack
+~
+dot
+ex
+=
+rand
+UnitF
+getsiz
+get
+save
+mems

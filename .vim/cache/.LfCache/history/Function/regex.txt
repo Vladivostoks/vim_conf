@@ -1,0 +1,4 @@
+:q
+get
+dot
+getI
